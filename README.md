@@ -10,12 +10,10 @@
 ###  Minimum Viable Product (MVP) User Stories
 - [ ] As a user, I want to turn on a LED light.
 - [ ] As a user, I want to turn off a LED light.
-- [ ] As a user, I want to control the LED's color.
 - [ ] As a user, I want to record and store time and the LED light voltage's value into a database.
 - [ ] As a user, I want to record and store time and the LED light color into a database.
 - [ ] As a admin, I want CURD-L capabilities for the LED light.
 - [ ] As a admin, I want CURD-L capabilities for any user.
-
 
 ### Instructions (assuming Mac OS)
 * Clone repository and move to the home repository folder `Computer:travel_api user$`.
@@ -32,7 +30,6 @@ Application: ruby-2.4.1, Bootstrap, HTML
 Testing: Rails 5.2.0, Rspec
 Environment: gems
 ```
-
 
 #### Sources
 * Interfacing Arduino and Ruby: https://playground.arduino.cc/Interfacing/Ruby
