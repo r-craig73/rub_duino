@@ -56,7 +56,7 @@ end
 
 #   arduino related rubygems
 # serialport is needed to control the RS-232 (or USB port)
-gem 'serialport', '~> 1.3', '>= 1.3.1'
+# gem 'serialport', '~> 1.3', '>= 1.3.1'
 # dino a simple(?) that helps you bootstrap prototyping with an Arduino
 gem 'dino'
 
