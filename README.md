@@ -31,7 +31,8 @@ Testing: Rails 5.2.0, Rspec
 Environment: gems
 ```
 
-#### Sources
+#### Sources and inspiration
+* _Getting Started with Arduino_ 2nd Edition by Massimo Banzi
 * Interfacing Arduino and Ruby: https://playground.arduino.cc/Interfacing/Ruby
 * Dreaming echoes: http://dreamingechoes.github.io/arduino/ruby/rails/physical-software-made-easy-with-arduino-and-ruby-on-rails/
 * Connecting Rails and Arduino with a serial port: https://medium.com/@jaeger.rob/connecting-rails-and-arduino-with-serialport-859b8e58db39
