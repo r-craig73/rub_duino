@@ -34,7 +34,7 @@ private
   end
 
   def sensor_params
-     params.require(:sensor).permit(:name, :description, :pin)
+     params.require(:sensor).permit(:name, :description, :pin, :kind)
   end
 
 end
