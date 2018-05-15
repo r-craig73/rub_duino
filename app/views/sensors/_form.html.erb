@@ -1,35 +1,37 @@
+<%= render "layouts/errors", :object => @sensor %>
+
 <%= form_for @sensor do |f| %>
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <%= f.label :name, "Name"%>
-      <%= f.text_field :name, size: 20 %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <%= f.label :name, "Name"%>
+        <%= f.text_field :name, size: 20 %>
+      </div>
+      <div class="col-md-6">
+      <%= f.label :description, "Description" %>
+      <%= f.text_area :description, size: "40x10"%>
+      </div>
     </div>
-    <div class="col-md-6">
-    <%= f.label :description, "Description" %>
-    <%= f.text_area :description, size: "40x10"%>
+    <div class="row">
+      <div class="col-md-6">
+        <%= f.label :kind, "Kind (Digital or Analog)"%>
+        <%= f.text_field :kind, size: 20 %>
+      </div>
+      <div class="col-md-6">
+      <%= f.label :pin, "Pin number" %>
+      <%= f.number_field :pin, in: 1..13, step: 1 %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <%= f.label :board, "Board"%>
+        <%= f.text_field :board, size: 20 %>
+      </div>
+      <div class="col-md-6">
+        <%= f.submit "Update or Add Sensor" %>
+      </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-6">
-      <%= f.label :kind, "Kind (Digital or Analog)"%>
-      <%= f.text_field :kind, size: 20 %>
-    </div>
-    <div class="col-md-6">
-    <%= f.label :pin, "Pin number" %>
-    <%= f.number_field :pin, in: 1..13, step: 1 %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <%= f.label :board, "Board"%>
-      <%= f.text_field :board, size: 20 %>
-    </div>
-    <div class="col-md-6">
-      <%= f.submit "Update or Add Sensor" %>
-    </div>
-  </div>
-</div>
 <% end %>
 <hr>
 
