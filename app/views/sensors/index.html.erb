@@ -5,7 +5,7 @@
 
 <% if @sensors.any? %>
 <div class="panel panel-default">
-  <div class="panel-heading"><h2>Sensors Table</h2></div>
+  <div class="panel-heading"><h2>Sensors Table</h2> <button type="button" class="btn-lg btn-default"><%= link_to "Add a Sensor", new_sensor_path %></div>
   <table class="table">
   <tr>
     <th>Name</th>

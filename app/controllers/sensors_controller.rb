@@ -7,10 +7,6 @@ class SensorsController < ApplicationController
     @sensors = Sensor.all
   end
 
-  def new
-    @sensor = Sensor.new
-  end
-
   def show
     @sensor = Sensor.find(params[:id])
     render :show
@@ -30,8 +26,12 @@ class SensorsController < ApplicationController
       end
   end
 
+  def new
+    @sensor = Sensor.new
+  end
+
   def create
-   @sensor = sensor.new(sensor_params)
+   @sensor = Sensor.new(sensor_params)
    if @sensor.save
      redirect_to sensors_path
      flash[:notice] = "The sensor is added to the Sensors Table"
