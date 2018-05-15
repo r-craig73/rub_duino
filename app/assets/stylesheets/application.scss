@@ -16,3 +16,17 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.jumbotron {
+  text-align: center;
+}
+
+.container, .panel-heading {
+  text-align: center;
+}
+
+th {
+  font-weight: bold;
+  font-size: 15pt;
+  text-align: center;
+}
