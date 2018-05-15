@@ -1,5 +1,7 @@
 class SensorsController < ApplicationController
-  before_filter :set_up_led, only: [:on, :off]
+  # before_filter :set_up_led, only: [:on, :off]
+  # include LcdBlink
+  before_action :set_up_led, only: [:on, :off]
 
   def index
     @sensors = Sensor.all
@@ -25,16 +27,14 @@ class SensorsController < ApplicationController
     flash[:notice] = "The sensor is removed"
   end
 
-
-
 private
 
   def set_up_led
-    @sensor = Dino::Components::Led.new(pin: 13, board: board)
+    @led = Dino::Components::Led.new(pin: 13, board: board)
   end
 
   def sensor_params
-     params.require(:sensor).permit(:name)
+     params.require(:sensor).permit(:name, :description, :pin)
   end
 
 end
