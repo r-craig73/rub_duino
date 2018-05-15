@@ -1,7 +1,15 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Sensor.destroy_all
+Measure.destroy_all
+
+sensor_names =  ["Blue LED", "Green LED", "Yellow LED"]
+sensor_descriptions = ["A simple Blue LED", "A common Green LED", "A normal Yellow LED"]
+sensor_kinds = "Digital"
+sensor_pins = 99
+sensor_boards = "board"
+
+skill_names.length.times do |i|
+   Sensor.create!(name: sensor_names[i], kind: sensor_kinds, description: sensor_descriptions[i], pin: sensor_pins, board: sensor_boards)
+   @skill_id = Skill.last.id
+ end
+
+ p "Created #{Sensor.count} make believe sensors"
