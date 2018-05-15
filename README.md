@@ -7,7 +7,7 @@
 ### Description
 #### An application combining Arduino HW & Ruby on Rails to let a user interact with a sensor (LED light).
 
-###  Minimum Viable Product (MVP) User Stories
+###  Minimum Viable Product (MVP) User and Administrator Stories
 - [ ] As a user, I want to turn on a LED light.
 - [ ] As a user, I want to turn off a LED light.
 - [ ] As a user, I want to record and store time and the LED light voltage's value into a database.
@@ -21,7 +21,7 @@
 * Verify that you are using ruby-2.4.1 in your terminal(s).
 * Run `$ bundle install` to install Ruby gems packages related to the Gemfile in the top level.
 * Rspec setup (Unit Testing and Models): In the terminal, run the following command `$ bundle exec rails generate rspec:install`. Files will be generated in the spec folder. In the home repository folder run `$ rspec` to view tests passing or failing.
-* Dino installation: Insert `gem 'dino'` in the `Gemile` and run `$ bundle install` to install the rubygem. Run the Arduino IDE software the boostrapper by opening the `rub_duino/du/du.ino` file.  Upload the file (right arrow) to the board to verify the communication between dino and the Arduino card is working properly.
+* Dino installation: Insert `gem 'dino'` in the `Gemfile` and run `$ bundle install` to install the rubygem. Run the Arduino IDE software the boostrapper by opening the `rub_duino/du/du.ino` file.  Upload the file (right arrow) to the board to verify the communication between dino and the Arduino card is working properly.
 * Database setup: Run `$ rake db:create` to generate a database. Run `$ rails generate migration action_name` generate a migration file for table manipulation. After generating the necessary tables, run `$ rake db:migrate` to prepare the database. Run `$ rake db:test:prepare` to create the Active Record schema.rb file. To run a seed to populate a database, run `$ rake db:seed`.
 * Rails server: Run `$ rails server` to start the Rails server. Navigate to `http://localhost:3000`. Refresh the page to reload any changes to the source files.
 
