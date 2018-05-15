@@ -11,11 +11,30 @@ class SensorsController < ApplicationController
     @sensor = Sensor.new
   end
 
+  def show
+    @sensor = Sensor.find(params[:id])
+    render :show
+  end
+
+  def edit
+    @sensor = Sensor.find(params[:id])
+  end
+
+  def update
+    @sensor = Sensor.find(params[:id])
+      if @sensor.update(sensor_params)
+        flash[:notice] = "Sensor is now updated"
+        redirect_to sensors_path
+      else
+        render :edit
+      end
+  end
+
   def create
    @sensor = sensor.new(sensor_params)
    if @sensor.save
-     flash[:notice] = "The sensor is added to the table"
      redirect_to sensors_path
+     flash[:notice] = "The sensor is added to the Sensors Table"
    else
      render :new
    end
@@ -24,7 +43,8 @@ class SensorsController < ApplicationController
   def destroy
     @sensor = Sensor.find(params[:id])
     @sensor.destroy
-    flash[:notice] = "The sensor is removed from the table"
+    redirect_to sensors_path
+    flash[:notice] = "The sensor is removed from the Sensors Table"
   end
 
 private

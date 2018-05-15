@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>Sensor Details</h2>
+  <hr>
+
+  <div class="panel panel-default">
+    <div class="panel-heading"><h2><%= @sensor.name %></h2></div>
+    <table class="table">
+      <tr>
+        <td>Description: <%= @sensor.description %></td>
+      </tr>
+      <tr>
+        <td>Kind: <%= @sensor.kind %></td>
+      </tr>
+      <tr>
+        <td>Pin connection: <%= @sensor.pin %></td>
+      </tr>
+    </table>
+  </div>
+
+  <hr>
+  <h3><%= link_to "Go Home", sensors_path %></h3>
+</div>
