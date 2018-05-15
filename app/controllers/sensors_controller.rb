@@ -14,7 +14,7 @@ class SensorsController < ApplicationController
   def create
    @sensor = sensor.new(sensor_params)
    if @sensor.save
-     flash[:notice] = "Your sensor is added to the list"
+     flash[:notice] = "The sensor is added to the table"
      redirect_to sensors_path
    else
      render :new
@@ -24,7 +24,7 @@ class SensorsController < ApplicationController
   def destroy
     @sensor = Sensor.find(params[:id])
     @sensor.destroy
-    flash[:notice] = "The sensor is removed"
+    flash[:notice] = "The sensor is removed from the table"
   end
 
 private
