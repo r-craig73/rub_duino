@@ -38,7 +38,7 @@ Environment: gems
 * Dreaming echoes: http://dreamingechoes.github.io/arduino/ruby/rails/physical-software-made-easy-with-arduino-and-ruby-on-rails/
 * Connecting Rails and Arduino with a serial port: https://medium.com/@jaeger.rob/connecting-rails-and-arduino-with-serialport-859b8e58db39
 * Ruby the Arduino way presentation by Austin Vance: http://confreaks.tv/videos/rubyconf2012-arduino-the-ruby-way
-* Using a controller as a rails link: #from https://stackoverflow.com/questions/11477191/how-do-i-run-ruby-code-on-a-button-click
+* Using a controller as a rails link: https://stackoverflow.com/questions/11477191/how-do-i-run-ruby-code-on-a-button-click
 
 Copyright (c) 2018 **_RC productions_**
 
