@@ -1,6 +1,5 @@
 class SensorsController < ApplicationController
   # before_filter :set_up_led, only: [:on, :off]
-  # include LcdBlink
   before_action :set_up_led, only: [:on, :off]
 
   def index
