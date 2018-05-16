@@ -8,12 +8,12 @@
 #### An application combining Arduino HW & Ruby on Rails to let a user interact with a sensor (LED light).
 
 ###  Minimum Viable Product (MVP) User and Administrator Stories
-- [ ] As a user, I want to turn on a LED light.
-- [ ] As a user, I want to turn off a LED light.
+- [x] As a user, I want to turn on a sensor.
+- [x] As a user, I want to turn off a sensor.
+- [x] CURD-L capabilities for a sensor.
 - [ ] As a user, I want to record and store time and the LED light voltage's value into a database.
 - [ ] As a user, I want to record and store time and the LED light color into a database.
 - [ ] As a admin, I want CURD-L capabilities for the LED light.
-- [ ] As a admin, I want CURD-L capabilities for any user.
 
 ### Instructions (assuming Mac OS)
 * Clone repository and move to the home repository folder `Computer:travel_api user$`.
@@ -38,6 +38,7 @@ Environment: gems
 * Dreaming echoes: http://dreamingechoes.github.io/arduino/ruby/rails/physical-software-made-easy-with-arduino-and-ruby-on-rails/
 * Connecting Rails and Arduino with a serial port: https://medium.com/@jaeger.rob/connecting-rails-and-arduino-with-serialport-859b8e58db39
 * Ruby the Arduino way presentation by Austin Vance: http://confreaks.tv/videos/rubyconf2012-arduino-the-ruby-way
+* Using a controller as a rails link: #from https://stackoverflow.com/questions/11477191/how-do-i-run-ruby-code-on-a-button-click
 
 Copyright (c) 2018 **_RC productions_**
 
