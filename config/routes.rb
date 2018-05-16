@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :sensors
 
+  #from https://stackoverflow.com/questions/11477191/how-do-i-run-ruby-code-on-a-button-click
   resources :lcds do
     collection do
       get :lcd_wink
