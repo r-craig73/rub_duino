@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   resources :sensors
 
-
   resources :lcds do
     collection do
       get :lcd_wink
@@ -11,17 +10,4 @@ Rails.application.routes.draw do
       get :lcd_off
     end
   end
-
-  # resources :lcds do
-  #   collection do
-  #     get :lcd_on
-  #   end
-  # end
-  #
-  # resources :lcds do
-  #   collection do
-  #     get :lcd_off
-  #   end
-  # end
-
 end

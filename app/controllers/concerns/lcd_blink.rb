@@ -1,6 +1,6 @@
 require 'dino'
 board = Dino::Board.new(Dino::TxRx.new)
-@red_led = Dino::Components::Led.new(pin: 13, board: board)
+@red_led = Dino::Components::Led.new(pin: 11, board: board)
 
 def forever_wink(led)
   [:on, :off].cycle do |switch|
