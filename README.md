@@ -10,10 +10,19 @@
 ###  Minimum Viable Product (MVP) User and Administrator Stories
 - [x] As a user, I want to turn on a sensor.
 - [x] As a user, I want to turn off a sensor.
-- [x] CURD-L capabilities for a sensor.
+- [x] As a user, I want to a sensor to quickly turn on and off (blinking/winking).
+- [x] As a user, I want to CURD-L sensor capabilities.
+- [ ] User Authentication between Administrator and Users (email and password)
+
+### Post MVP User and Administrator stories
+- [ ] As a user, I want to turn on multiple sensors.
+- [ ] As a user, I want to customize a sensor's action (on/off, blinking/sensor, etc.).
+- [ ] As a user, I want to to know when a sensor is either working or not working.
 - [ ] As a user, I want to record and store time and the LED light voltage's value into a database.
 - [ ] As a user, I want to record and store time and the LED light color into a database.
-- [ ] As a admin, I want CURD-L capabilities for the LED light.
+- [ ] As a user, I want to select and visualize my sensor results within the application (voltage vs. time, line graph, etc.).
+- [ ] As a user, I want to sensor to alert about a certain event (Portland news, a special alert, earthquake warning, etc.).
+- [ ] As a admin, I want user CURD-L capabilities.
 
 ### Instructions (assuming Mac OS)
 * Clone repository and move to the home repository folder `Computer:travel_api user$`.
@@ -21,24 +30,29 @@
 * Verify that you are using ruby-2.4.1 in your terminal(s).
 * Run `$ bundle install` to install Ruby gems packages related to the Gemfile in the top level.
 * Rspec setup (Unit Testing and Models): In the terminal, run the following command `$ bundle exec rails generate rspec:install`. Files will be generated in the spec folder. In the home repository folder run `$ rspec` to view tests passing or failing.
-* Dino installation: Insert `gem 'dino'` in the `Gemfile` and run `$ bundle install` to install the rubygem. Run the Arduino IDE software the boostrapper by opening the `rub_duino/du/du.ino` file.  Upload the file (right arrow) to the board to verify the communication between dino and the Arduino card is working properly. Detailed instructions are located in the `http://tutorials.jumpstartlab.com/projects/arduino/introducing_arduino.html`.
+* Dino installation: Insert `gem 'dino'` in the `Gemfile` and run `$ bundle install` to install the rubygem. Download and install the Arduino IDE software. After verifying USB connection to your Arduino device, open the `rub_duino/du/du.ino` file.  Upload the file (right arrow) to install dino. You can now close the Arduino software.  Detailed instructions are located in `https://github.com/austinbv/dino`.
 * Database setup: Run `$ rake db:create` to generate a database. Run `$ rails generate migration action_name` generate a migration file for table manipulation. After generating the necessary tables, run `$ rake db:migrate` to prepare the database. Run `$ rake db:test:prepare` to create the Active Record schema.rb file. To run a seed to populate a database, run `$ rake db:seed`.
 * Rails server: Run `$ rails server` to start the Rails server. Navigate to `http://localhost:3000`. Refresh the page to reload any changes to the source files.
+
+## Bugs
+* Possible latency issues between either Arduino card or rails server.
+* The script will run any sensor.
 
 ## Technologies Used
 ```
 Application: ruby-2.4.1, Bootstrap, HTML
 Testing: Rails 5.2.0, Rspec
-Environment: gems
+Environment: rubygems
 ```
 
 #### Sources and inspiration
 * _Getting Started with Arduino_ 2nd Edition by Massimo Banzi
 * Interfacing Arduino and Ruby: https://playground.arduino.cc/Interfacing/Ruby
+* Introducing Arduino and Ruby: http://tutorials.jumpstartlab.com/projects/arduino/introducing_arduino.html
 * Dreaming echoes: http://dreamingechoes.github.io/arduino/ruby/rails/physical-software-made-easy-with-arduino-and-ruby-on-rails/
 * Connecting Rails and Arduino with a serial port: https://medium.com/@jaeger.rob/connecting-rails-and-arduino-with-serialport-859b8e58db39
 * Ruby the Arduino way presentation by Austin Vance: http://confreaks.tv/videos/rubyconf2012-arduino-the-ruby-way
-* Using a controller as a rails link: https://stackoverflow.com/questions/11477191/how-do-i-run-ruby-code-on-a-button-click
+* Setup a link to run a ruby function using Ruby on rails: https://stackoverflow.com/questions/11477191/how-do-i-run-ruby-code-on-a-button-click
 
 Copyright (c) 2018 **_RC productions_**
 
