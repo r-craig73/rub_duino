@@ -7,6 +7,13 @@
 ### Description
 #### An application combining Arduino HW & Ruby on Rails to let a user interact with a sensor (LED light).
 
+### Home Page Screenshot
+<kbd><img src="./app/assets/images/Rub_dino_homepage.png" alt="Rub_dino's Home Page Screenshot"></kbd>
+
+### Red LED Sensor Screenshot
+<kbd><img src="./app/assets/images/Red_LED_sensor.png" alt="Red LED Sensor Screenshot"></kbd>
+
+
 ###  Minimum Viable Product (MVP) User and Administrator Stories
 - [x] As a user, I want to turn on a sensor.
 - [x] As a user, I want to turn off a sensor.
@@ -15,14 +22,15 @@
 - [ ] User Authentication between Administrator and Users (email and password)
 
 ### Post MVP User and Administrator stories
-- [ ] As a user, I want to turn on multiple sensors.
+- [ ] As a user, I want to turn on multiple sensors (new interface).
 - [ ] As a user, I want to customize a sensor's action (on/off, blinking/sensor, etc.).
 - [ ] As a user, I want to to know when a sensor is either working or not working.
 - [ ] As a user, I want to record and store time and the LED light voltage's value into a database.
 - [ ] As a user, I want to record and store time and the LED light color into a database.
 - [ ] As a user, I want to select and visualize my sensor results within the application (voltage vs. time, line graph, etc.).
 - [ ] As a user, I want to sensor to alert about a certain event (Portland news, a special alert, earthquake warning, etc.).
-- [ ] As a admin, I want user CURD-L capabilities.
+- [ ] As a admin, I want CURD-L capabilities for ALL users.
+- [ ] As a admin, I want users to have '--R--L' (out of CRUD-L) capabilities on other user's sensors.
 
 ### Instructions (assuming Mac OS)
 * Clone repository and move to the home repository folder `Computer:travel_api user$`.
@@ -30,7 +38,7 @@
 * Verify that you are using ruby-2.4.1 in your terminal(s).
 * Run `$ bundle install` to install Ruby gems packages related to the Gemfile in the top level.
 * Rspec setup (Unit Testing and Models): In the terminal, run the following command `$ bundle exec rails generate rspec:install`. Files will be generated in the spec folder. In the home repository folder run `$ rspec` to view tests passing or failing.
-* Dino installation: Insert `gem 'dino'` in the `Gemfile` and run `$ bundle install` to install the rubygem. Download and install the Arduino IDE software. After verifying USB connection to your Arduino device, open the `rub_duino/du/du.ino` file.  Upload the file (right arrow) to install dino. You can now close the Arduino software.  Detailed instructions are located in `https://github.com/austinbv/dino`.
+* Dino installation: Insert `gem 'dino'` in the `Gemfile` and run `$ bundle install` to install the rubygem. Download and install the Arduino IDE software. After verifying USB connection to your Arduino device, open the `rub_duino/du/du.ino` file.  Upload the file (right arrow) to install dino. You can now close the Arduino software.  Detailed instructions are located in https://github.com/austinbv/dino.
 * Database setup: Run `$ rake db:create` to generate a database. Run `$ rails generate migration action_name` generate a migration file for table manipulation. After generating the necessary tables, run `$ rake db:migrate` to prepare the database. Run `$ rake db:test:prepare` to create the Active Record schema.rb file. To run a seed to populate a database, run `$ rake db:seed`.
 * Rails server: Run `$ rails server` to start the Rails server. Navigate to `http://localhost:3000`. Refresh the page to reload any changes to the source files.
 
