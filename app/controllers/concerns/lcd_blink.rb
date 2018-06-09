@@ -38,6 +38,9 @@ def rgb_twocolor(led)
 end
 
 def rgb_color(led)
+  led.analog_write(3, 255)
+  led.analog_write(5, 0)
+  led.analog_write(6, 0)
 
   # colors to consider rainbow ROYGBIV
   # color(255, 0, 0) red
@@ -49,7 +52,7 @@ def rgb_color(led)
   # color(148, 0, 211) violet
 end
 
-
+rgb_twocolor(@rgb_led)
 
 # 10.times do
 #   wink(@one_led)
@@ -58,10 +61,6 @@ end
 # 3.times do
 #   slow_wink(@one_led)
 # end
-
-#@rgb_led.color(0, 0, 255)
-
-
 
 # 2.times do
 #   rgb_twocolor(@rgb_led)
