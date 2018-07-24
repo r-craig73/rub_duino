@@ -33,7 +33,7 @@
 - [ ] As a admin, I want users to have '--R--L' (out of CRUD-L) capabilities on other user's sensors.
 
 ### Instructions (assuming Mac OS)
-* Clone repository and move to the home repository folder `Computer:travel_api user$`.
+* Clone repository and move to the home repository folder `rub_duino`.
 * Run `$ gem install rails`.
 * Verify that you are using ruby-2.4.1 in your terminal(s).
 * Run `$ bundle install` to install Ruby gems packages related to the Gemfile in the top level.
@@ -72,5 +72,5 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
