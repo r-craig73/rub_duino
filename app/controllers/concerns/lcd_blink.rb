@@ -31,7 +31,7 @@ def wink(led)
   sleep 0.2
 end
 
-def rgb_twocolor(led)
+def rgb_multicolor(led)
   %i[red green blue cyan yellow magenta white off].each do |switch|
     p switch
     led.send(switch)
@@ -50,7 +50,7 @@ def rgb_color(led)
   # color(148, 0, 211) violet
 end
 
-rgb_twocolor(@rgb_led)
+rgb_multicolor(@rgb_led)
 
 # rgb_color(@rgb_led)
 
