@@ -22,7 +22,7 @@ class LcdsController < ApplicationController
     @led = Dino::Components::Led.new(pin: number, board: board)
     sleep 1
     @led.send(:on)
-    sleep 60  #60 seconds timeout to not burn out the sensor
+    sleep 60 # 60 seconds timeout to not burn out the sensor
     @led.send(:off)
   end
 
@@ -33,5 +33,4 @@ class LcdsController < ApplicationController
     @led = Dino::Components::Led.new(pin: number, board: board)
     @led.send(:off)
   end
-
 end
