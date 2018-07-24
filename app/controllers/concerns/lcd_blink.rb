@@ -44,12 +44,8 @@ def rgb_color(led)
   led.analog_write(5, 0)
   led.analog_write(6, 0)
 
-  # colors to consider rainbow ROYGBIV
-  # color(255, 0, 0) red
+  # non dino gem COLORS
   # color(255, 149, 7) orange
-  # color(255, 255, 0) yellow
-  # color(0, 255, 0) green
-  # color(0, 0, 255) blue
   # color(75, 0, 130) indigo
   # color(148, 0, 211) violet
 end
