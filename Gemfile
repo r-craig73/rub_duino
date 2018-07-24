@@ -64,7 +64,7 @@ end
 # serialport is needed to control the RS-232 (or USB port)
 # gem 'serialport', '~> 1.3', '>= 1.3.1'
 # dino a simple(?) that helps you bootstrap prototyping with an Arduino
-gem 'dino', '>= 0.11.2'
+gem 'dino'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
