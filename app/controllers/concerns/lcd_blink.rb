@@ -3,7 +3,7 @@ require 'dino'
 
 board = Dino::Board.new(Dino::TxRx.new)
 @one_led = Dino::Components::Led.new(pin: 11, board: board)
-@rgb_led = Dino::Components::RgbLed.new(pins: {red: 3, green: 5, blue: 6}, board: board)
+@rgb_led = Dino::Components::RgbLed.new(pins: { red: 3, green: 5, blue: 6 }, board: board)
 
 def forever_wink(led)
   [:on, :off].cycle do |switch|
