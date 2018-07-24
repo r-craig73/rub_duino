@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'bundler/setup'
 require 'dino'
 
@@ -6,7 +8,7 @@ board = Dino::Board.new(Dino::TxRx.new)
 @rgb_led = Dino::Components::RgbLed.new(pins: { red: 3, green: 5, blue: 6 }, board: board)
 
 def forever_wink(led)
-  [:on, :off].cycle do |switch|
+  %i[on off].cycle do |switch|
     led.send(switch)
     p switch
     sleep 0.5
@@ -30,10 +32,10 @@ def wink(led)
 end
 
 def rgb_twocolor(led)
-  [:red, :green, :blue, :cyan, :yellow, :magenta, :white, :off].each do |switch|
+  %i[red green blue cyan yellow magenta white off].each do |switch|
     p switch
     led.send(switch)
-    sleep 1
+    sleep 2
   end
 end
 
@@ -53,6 +55,8 @@ def rgb_color(led)
 end
 
 rgb_twocolor(@rgb_led)
+
+# rgb_color(@rgb_led)
 
 # 10.times do
 #   wink(@one_led)
