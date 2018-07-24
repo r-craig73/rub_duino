@@ -41,10 +41,11 @@ class LcdsController < ApplicationController
   end
 
   def rgb_multicolor
+    @sensor = Sensor.find(params[:id])
     board = Dino::Board.new(Dino::TxRx.new)
     @rgb_led = Dino::Components::RgbLed.new(pins: { red: 3, green: 5, blue: 6 }, board: board)
     %i[red green blue cyan yellow magenta white off].each do |switch|
-      led.send(switch)
+      @rgb_led.send(switch)
       sleep 2
     end
   end
