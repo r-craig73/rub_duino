@@ -10,9 +10,11 @@
 ### Home Page Screenshot
 <kbd><img src="./app/assets/images/Rub_dino_homepage.png" alt="Rub_dino's Home Page Screenshot"></kbd>
 
-### Red LED Sensor Screenshot
-<kbd><img src="./app/assets/images/Red_LED_sensor.png" alt="Red LED Sensor Screenshot"></kbd>
+### Blue LED Sensor Screenshot
+<kbd><img src="./app/assets/images/Blue_LED_sensor.png" alt="Blue LED Sensor Screenshot"></kbd>
 
+### RGB (Red-Green-Blue) LED Sensor Screenshot
+<kbd><img src="./app/assets/images/RGB_LED_sensor.png" alt="RGB LED Sensor Screenshot"></kbd>
 
 ###  Minimum Viable Product (MVP) User and Administrator Stories
 - [x] As a user, I want to turn on a sensor.
@@ -44,7 +46,6 @@
 
 ## Bugs
 * Possible latency issues between either Arduino card or rails server.
-* The script will run any sensor.
 
 ## Technologies Used
 ```
