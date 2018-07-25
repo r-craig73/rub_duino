@@ -73,47 +73,35 @@ class RgblcdsController < ApplicationController
 
   def rgb_yellow
     @sensor = Sensor.find(params[:id])
-    number = @sensor.pin
     board = Dino::Board.new(Dino::TxRx.new)
-    if number == 3
-      @rgb_led = Dino::Components::RgbLed.new(pins: { red: 3, green: 5, blue: 6 }, board: board)
-      @rgb_led.send(:yellow)
-      sleep 60 # 60 seconds timeout to not burn out the sensor
-      @rgb_led.send(:off)
-    end
+    @rgb_led = Dino::Components::RgbLed.new(pins: { red: 3, green: 5, blue: 6 }, board: board)
+    @rgb_led.send(:yellow)
+    sleep 60 # 60 seconds timeout to not burn out the sensor
+    @rgb_led.send(:off)
   end
 
   def rgb_mangenta
     @sensor = Sensor.find(params[:id])
-    number = @sensor.pin
     board = Dino::Board.new(Dino::TxRx.new)
-    if number == 3
-      @rgb_led = Dino::Components::RgbLed.new(pins: { red: 3, green: 5, blue: 6 }, board: board)
-      @rgb_led.send(:mangenta)
-      sleep 60 # 60 seconds timeout to not burn out the sensor
-      @rgb_led.send(:off)
-    end
+    @rgb_led = Dino::Components::RgbLed.new(pins: { red: 3, green: 5, blue: 6 }, board: board)
+    @rgb_led.send(:mangenta)
+    sleep 60 # 60 seconds timeout to not burn out the sensor
+    @rgb_led.send(:off)
   end
 
   def rgb_white
     @sensor = Sensor.find(params[:id])
-    number = @sensor.pin
     board = Dino::Board.new(Dino::TxRx.new)
-    if number == 3
-      @rgb_led = Dino::Components::RgbLed.new(pins: { red: 3, green: 5, blue: 6 }, board: board)
-      @rgb_led.send(:white)
-      sleep 60 # 60 seconds timeout to not burn out the sensor
-      @rgb_led.send(:off)
-    end
+    @rgb_led = Dino::Components::RgbLed.new(pins: { red: 3, green: 5, blue: 6 }, board: board)
+    @rgb_led.send(:white)
+    sleep 60 # 60 seconds timeout to not burn out the sensor
+    @rgb_led.send(:off)
   end
 
   def rgb_off
     @sensor = Sensor.find(params[:id])
-    number = @sensor.pin
     board = Dino::Board.new(Dino::TxRx.new)
-    if number == 3
-      @rgb_led = Dino::Components::RgbLed.new(pins: { red: 3, green: 5, blue: 6 }, board: board)
-      @rgb_led.send(:off)
-    end
+    @rgb_led = Dino::Components::RgbLed.new(pins: { red: 3, green: 5, blue: 6 }, board: board)
+    @rgb_led.send(:off)
   end
 end
