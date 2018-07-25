@@ -14,10 +14,12 @@ class LcdsController < ApplicationController
     @sensor = Sensor.find(params[:id])
     number = @sensor.pin
     board = Dino::Board.new(Dino::TxRx.new)
-    @led = Dino::Components::Led.new(pin: number, board: board)
-    sleep 1
-    10.times do
-      wink(@led)
+    if number !3
+      @led = Dino::Components::Led.new(pin: number, board: board)
+      sleep 1
+      10.times do
+        wink(@led)
+      end
     end
   end
 
@@ -25,11 +27,13 @@ class LcdsController < ApplicationController
     @sensor = Sensor.find(params[:id])
     number = @sensor.pin
     board = Dino::Board.new(Dino::TxRx.new)
-    @led = Dino::Components::Led.new(pin: number, board: board)
-    sleep 1
-    @led.send(:on)
-    sleep 60 # 60 seconds timeout to not burn out the sensor
-    @led.send(:off)
+    if number !3
+      @led = Dino::Components::Led.new(pin: number, board: board)
+      sleep 1
+      @led.send(:on)
+      sleep 60 # 60 seconds timeout to not burn out the sensor
+      @led.send(:off)
+    end
   end
 
   def lcd_off
@@ -38,15 +42,5 @@ class LcdsController < ApplicationController
     board = Dino::Board.new(Dino::TxRx.new)
     @led = Dino::Components::Led.new(pin: number, board: board)
     @led.send(:off)
-  end
-
-  def rgb_multicolor
-    @sensor = Sensor.find(params[:id])
-    board = Dino::Board.new(Dino::TxRx.new)
-    @rgb_led = Dino::Components::RgbLed.new(pins: { red: 3, green: 5, blue: 6 }, board: board)
-    %i[red green blue cyan yellow magenta white off].each do |switch|
-      @rgb_led.send(switch)
-      sleep 2
-    end
   end
 end
