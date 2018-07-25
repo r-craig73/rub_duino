@@ -28,6 +28,15 @@
           <button type="button" class="btn-lg btn-default"><%= link_to "LCD Off", rgb_off_rgblcds_path(@sensor, :id => @sensor.id) %></button>
           </td>
         </tr>
+      <% elsif @sensor.pin == 2 %>
+        <tr>
+          <td>
+          FAKE Large Fan Commands (still building Large Fan) <br>
+          <button type="button" class="btn-lg btn-primary">Blow Paper Away</button>
+          <button type="button" class="btn-lg btn-warning">Blow Cats and Dogs Away</button>
+          <button type="button" class="btn-lg btn-danger">Blow Humans Away</button>
+          </td>
+        </tr>
       <% else %>
         <tr>
           <td>
