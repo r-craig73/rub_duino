@@ -1,31 +1,32 @@
 <div class="jumbotron">
   <h1>Welcome to Arduino UNO Sensors Land!</h1>
   <h2>Click one of the action buttons below to start controlling the sensor.</h2>
-</div>
 
-<% if @sensors.any? %>
-<div class="panel panel-default">
-  <div class="panel-heading"><h2>Sensors Table</h2> <button type="button" class="btn-lg btn-default"><%= link_to "Add a Sensor", new_sensor_path %></div>
-  <table class="table">
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Pin</th>
-    <th>Actions</th>
-  </tr>
-  <tr>
-    <% @sensors.each do |sensor| %>
-      <td><%= sensor.name %></td>
-      <td><%= sensor.description %></td>
-      <td><%= sensor.pin %></td>
-      <td><button type="button" class="btn-lg btn-success"><%= link_to "Show", sensor_path(sensor) %></button>
-          <button type="button" class="btn-lg btn-info"><%= link_to "Edit", edit_sensor_path(sensor) %></button>
-          <button type="button" class="btn-lg btn-danger"><%= link_to "Delete", sensor_path(sensor), :data => { :confirm => "You sure?", :method => "delete" } %></button>
-      </td>
-  </tr>
-    <% end %>
-  </table>
+  <% if @sensors.any? %>
+  <div class="panel panel-default">
+    <div class="panel-heading"><h2>Sensors Table</h2> <button type="button" class="btn-lg btn-default"><%= link_to "Add a Sensor", new_sensor_path %></div>
+    <table class="table">
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Pin</th>
+      <th>Actions</th>
+    </tr>
+    <tr>
+      <% @sensors.each do |sensor| %>
+        <td><%= sensor.name %></td>
+        <td><%= sensor.description %></td>
+        <td><%= sensor.pin %></td>
+        <td><button type="button" class="btn-lg btn-success"><%= link_to "Control Sensor", sensor_path(sensor) %></button>
+            <button type="button" class="btn-lg btn-warning"><%= link_to "Edit Sensor", edit_sensor_path(sensor) %></button>
+            <button type="button" class="btn-lg btn-danger"><%= link_to "Delete Sensor", sensor_path(sensor), :data => { :confirm => "You sure?", :method => "delete" } %></button>
+        </td>
+    </tr>
+      <% end %>
+    </table>
+    </div>
   </div>
-<% else %>
-<h2>No sensors are available...yet!</h2>
-<% end %>
+  <% else %>
+  <h2>No sensors are available...yet!</h2>
+  <% end %>
+</div>
