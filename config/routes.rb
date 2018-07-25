@@ -15,7 +15,15 @@ Rails.application.routes.draw do
 
   resources :rgblcds do
     collection do
-      # get :rgb_multicolor
+      get :rgb_multicolor
+      get :rgb_red
+      get :rgb_green
+      get :rgb_blue
+      get :rgb_cyan
+      get :rgb_yellow
+      get :rgb_mangenta
+      get :rgb_white
+      get :rgb_off
     end
   end
 end
