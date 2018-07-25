@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# CRUD-L settings for Sensors
 class SensorsController < ApplicationController
   before_action :set_up_led, only: %i[on off]
 

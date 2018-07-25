@@ -1,14 +1,8 @@
 # frozen_string_literal: true
 
+# Different RGB LCD methods representing sensor buttons
 class RgblcdsController < ApplicationController
   require 'dino'
-
-  def wink(single_led)
-    single_led.on
-    sleep 0.1
-    single_led.off
-    sleep 0.1
-  end
 
   def rgb_multicolor
     @sensor = Sensor.find(params[:id])

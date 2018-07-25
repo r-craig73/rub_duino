@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Pratice ruby scripts for single color LCD
 require 'bundler/setup'
 require 'dino'
 

@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Different LCD methods representing sensor buttons
 class LcdsController < ApplicationController
   require 'dino'
 
