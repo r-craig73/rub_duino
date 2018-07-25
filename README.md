@@ -16,14 +16,18 @@
 ### RGB (Red-Green-Blue) LED Sensor Screenshot
 <kbd><img src="./app/assets/images/RGB_LED_sensor.png" alt="RGB LED Sensor Screenshot"></kbd>
 
+### Large Fan Sensor Screenshot
+<kbd><img src="./app/assets/images/Large_fan_sensor.png" alt="Large Fan Sensor Screenshot"></kbd>
+
 ###  Minimum Viable Product (MVP) User and Administrator Stories
 - [x] As a user, I want to turn on a sensor.
 - [x] As a user, I want to turn off a sensor.
 - [x] As a user, I want to a sensor to quickly turn on and off (blinking/winking).
+- [x] As a user, I want to control different sensors.
 - [x] As a user, I want to CURD-L sensor capabilities.
-- [ ] User Authentication between Administrator and Users (email and password)
 
 ### Post MVP User and Administrator stories
+- [ ] User Authentication between Administrator and Users (email and password)
 - [ ] As a user, I want to turn on multiple sensors (new interface).
 - [ ] As a user, I want to customize a sensor's action (on/off, blinking/sensor, etc.).
 - [ ] As a user, I want to to know when a sensor is either working or not working.
