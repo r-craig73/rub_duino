@@ -14,27 +14,30 @@
       <tr>
         <td>Pin connection: <%= @sensor.pin %></td>
       </tr>
-      <tr>
-        <td>
-        Single LCD Commands
-        <button type="button" class="btn-lg btn-default"><%= link_to "Run Blinking LCD", lcd_wink_lcds_path(@sensor, :id => @sensor.id) %></button>
-        <button type="button" class="btn-lg btn-info"><%= link_to "LCD On", lcd_on_lcds_path(@sensor, :id => @sensor.id) %></button>
-        <button type="button" class="btn-lg btn-default"><%= link_to "LCD Off", lcd_off_lcds_path(@sensor, :id => @sensor.id) %></button>
-        </td>
-      </tr>
-      <tr>
-        <td>
-        RGB (Red-Green-Blue) LCD Commands
-        <button type="button" class="btn-lg btn-danger"><%= link_to "Seven Multi-color RGB LCD", rgb_multicolor_rgblcds_path(@sensor, :id => @sensor.id) %></button>
-        <button type="button" class="btn-lg btn-success"><%= link_to "LCD Green On", rgb_green_rgblcds_path(@sensor, :id => @sensor.id) %></button>
-        <button type="button" class="btn-lg btn-danger"><%= link_to "LCD Red On", rgb_red_rgblcds_path(@sensor, :id => @sensor.id) %></button>
-        <button type="button" class="btn-lg btn-default"><%= link_to "LCD Blue On", rgb_blue_rgblcds_path(@sensor, :id => @sensor.id) %></button>
-        <button type="button" class="btn-lg btn-info"><%= link_to "LCD Cyan On", rgb_cyan_rgblcds_path(@sensor, :id => @sensor.id) %></button>
-        <button type="button" class="btn-lg btn-warning"><%= link_to "LCD Yellow On", rgb_yellow_rgblcds_path(@sensor, :id => @sensor.id) %></button>
-        <button type="button" class="btn-lg btn-success"><%= link_to "LCD White On", rgb_white_rgblcds_path(@sensor, :id => @sensor.id) %></button>
-        <button type="button" class="btn-lg btn-default"><%= link_to "LCD Off", rgb_off_rgblcds_path(@sensor, :id => @sensor.id) %></button>
-        </td>
-      </tr>
+      <% if @sensor.pin == 3 %>
+        <tr>
+          <td>
+          LCD Commands <br>
+          <button type="button" class="btn-lg btn-danger"><%= link_to "Seven Multi-color RGB LCD", rgb_multicolor_rgblcds_path(@sensor, :id => @sensor.id) %></button>
+          <button type="button" class="btn-lg btn-success"><%= link_to "LCD Green On", rgb_green_rgblcds_path(@sensor, :id => @sensor.id) %></button>
+          <button type="button" class="btn-lg btn-danger"><%= link_to "LCD Red On", rgb_red_rgblcds_path(@sensor, :id => @sensor.id) %></button>
+          <button type="button" class="btn-lg btn-default"><%= link_to "LCD Blue On", rgb_blue_rgblcds_path(@sensor, :id => @sensor.id) %></button>
+          <button type="button" class="btn-lg btn-info"><%= link_to "LCD Cyan On", rgb_cyan_rgblcds_path(@sensor, :id => @sensor.id) %></button>
+          <button type="button" class="btn-lg btn-warning"><%= link_to "LCD Yellow On", rgb_yellow_rgblcds_path(@sensor, :id => @sensor.id) %></button>
+          <button type="button" class="btn-lg btn-success"><%= link_to "LCD White On", rgb_white_rgblcds_path(@sensor, :id => @sensor.id) %></button>
+          <button type="button" class="btn-lg btn-default"><%= link_to "LCD Off", rgb_off_rgblcds_path(@sensor, :id => @sensor.id) %></button>
+          </td>
+        </tr>
+      <% else %>
+        <tr>
+          <td>
+          LCD Commands <br>
+          <button type="button" class="btn-lg btn-default"><%= link_to "Run Blinking LCD", lcd_wink_lcds_path(@sensor, :id => @sensor.id) %></button>
+          <button type="button" class="btn-lg btn-info"><%= link_to "LCD On", lcd_on_lcds_path(@sensor, :id => @sensor.id) %></button>
+          <button type="button" class="btn-lg btn-default"><%= link_to "LCD Off", lcd_off_lcds_path(@sensor, :id => @sensor.id) %></button>
+          </td>
+        </tr>
+      <% end %>
     </table>
   </div>
 
