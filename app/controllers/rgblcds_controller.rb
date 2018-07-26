@@ -74,11 +74,11 @@ class RgblcdsController < ApplicationController
     @rgb_led.send(:off)
   end
 
-  def rgb_mangenta
+  def rgb_magenta
     @sensor = Sensor.find(params[:id])
     board = Dino::Board.new(Dino::TxRx.new)
     @rgb_led = Dino::Components::RgbLed.new(pins: { red: 3, green: 5, blue: 6 }, board: board)
-    @rgb_led.send(:mangenta)
+    @rgb_led.send(:magenta)
     sleep 60 # 60 seconds timeout to not burn out the sensor
     @rgb_led.send(:off)
   end

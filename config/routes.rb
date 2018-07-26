@@ -21,7 +21,7 @@ Rails.application.routes.draw do
       get :rgb_blue
       get :rgb_cyan
       get :rgb_yellow
-      get :rgb_mangenta
+      get :rgb_magenta
       get :rgb_white
       get :rgb_off
     end
