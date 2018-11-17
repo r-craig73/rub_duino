@@ -1,4 +1,4 @@
-## Capstone project: rub_duino
+## Epicodus Capstone project: rub_duino
 
 ##### by Ron Craig (ron.craig@comcast.net ∙ https://github.com/r-craig73 ∙ https://linkedin.com/in/craigronald)
 
@@ -45,7 +45,7 @@
 * Run `$ bundle install` to install Ruby gems packages related to the Gemfile in the top level.
 * Rspec setup (Unit Testing and Models): In the terminal, run the following command `$ bundle exec rails generate rspec:install`. Files will be generated in the spec folder. In the home repository folder run `$ rspec` to view tests passing or failing.
 * Dino installation: Insert `gem 'dino'` in the `Gemfile` and run `$ bundle install` to install the rubygem. Download and install the Arduino IDE software. After verifying USB connection to your Arduino device, open the `rub_duino/du/du.ino` file.  Upload the file (right arrow) to install dino. You can now close the Arduino software.  Detailed instructions are located in https://github.com/austinbv/dino.
-* Database setup: Run `$ rake db:create` to generate a database. Run `$ rails generate migration action_name` generate a migration file for table manipulation. After generating the necessary tables, run `$ rake db:migrate` to prepare the database. Run `$ rake db:test:prepare` to create the Active Record schema.rb file. To run a seed to populate a database, run `$ rake db:seed`.
+* Database setup: Run `$ rails db:create` to generate a database. Run `$ rails generate migration action_name` generate a migration file for table manipulation. After generating the necessary tables, run `$ rails db:migrate` to prepare the database. Run `$ rails db:test:prepare` to create the Active Record schema.rb file. To run a seed to populate a database, run `$ rails db:seed`.
 * Rails server: Run `$ rails server` to start the Rails server. Navigate to `http://localhost:3000`. Refresh the page to reload any changes to the source files.
 
 ## Bugs
@@ -53,7 +53,7 @@
 
 ## Technologies Used
 ```
-Application: ruby-2.4.1, Bootstrap, HTML
+Application: ruby-2.4.1, Bootstrap, HTML, postgres
 Testing: Rails 5.2.0, Rspec
 Environment: rubygems
 ```
