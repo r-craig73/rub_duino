@@ -28,6 +28,10 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Use nokogiri
+gem 'nokogiri', '>= 1.8.5'
+
+
 gem 'rack', '>= 2.0.6'
 
 # Use ActiveStorage variant
