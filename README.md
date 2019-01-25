@@ -46,7 +46,8 @@
 * Rspec setup (Unit Testing and Models): In the terminal, run the following command `$ bundle exec rails generate rspec:install`. Files will be generated in the spec folder. In the home repository folder run `$ rspec` to view tests passing or failing.
 * Dino installation: Insert `gem 'dino'` in the `Gemfile` and run `$ bundle install` to install the rubygem. Download and install the Arduino IDE software. After verifying USB connection to your Arduino device, open the `rub_duino/du/du.ino` file.  Upload the file (right arrow) to install dino. You can now close the Arduino software.  Detailed instructions are located in https://github.com/austinbv/dino.
 * Database setup: Run `$ rails db:create` to generate a database. Run `$ rails generate migration action_name` generate a migration file for table manipulation. After generating the necessary tables, run `$ rails db:migrate` to prepare the database. Run `$ rails db:test:prepare` to create the Active Record schema.rb file. To run a seed to populate a database, run `$ rails db:seed`.
-* Rails server: Run `$ rails server` to start the Rails server. Navigate to `http://localhost:3000`. Refresh the page to reload any changes to the source files.
+* In a terminal, start postgres database system `$ postgres`
+* In another terminal, start Rails server `$ rails server`. Navigate a web browser (Chrome, Firefox, etc.) to `http://localhost:3000`. Refresh the page to reload any changes to the source files.
 
 ## Bugs
 * Possible latency issues between either Arduino card or rails server.
@@ -58,7 +59,7 @@ Testing: Rails 5.2.0, Rspec
 Environment: rubygems
 ```
 
-#### Sources and inspiration
+#### Sources and Inspiration
 * _Getting Started with Arduino_ 2nd Edition by Massimo Banzi
 * Interfacing Arduino and Ruby: https://playground.arduino.cc/Interfacing/Ruby
 * Introducing Arduino and Ruby: http://tutorials.jumpstartlab.com/projects/arduino/introducing_arduino.html
