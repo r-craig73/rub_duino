@@ -38,6 +38,11 @@
 - [ ] As a admin, I want CURD-L capabilities for ALL users.
 - [ ] As a admin, I want users to have '--R--L' (out of CRUD-L) capabilities on other user's sensors.
 
+## `rub_dino` Arduino UNO HW schematics and diagram
+<kbd><img src="./app/assets/images/Arduino-rub_duino-uno-schematics.png" alt="Arduino UNO chematics for rub_duino"></kbd>
+
+<kbd><img src="./app/assets/images/Arduino-rub_duino-uno-diagram.png" alt="Arduino UNO diagram for rub_duino"></kbd>
+
 ### Instructions (assuming Mac OS)
 * Clone repository and move to the home repository folder `rub_duino`.
 * Run `$ gem install rails`.
