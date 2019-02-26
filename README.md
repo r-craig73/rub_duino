@@ -60,7 +60,7 @@
 ## Technologies Used
 ```
 Application: ruby-2.4.1, Bootstrap, HTML, postgres
-Testing: Rails 5.2.0, Rspec
+Testing: Rails 5.2.0, rspec
 Environment: rubygems
 ```
 
