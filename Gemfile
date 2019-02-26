@@ -43,7 +43,7 @@ gem 'rack', '>= 2.0.6'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'faker'
-gem 'bootstrap-sass', '~> 3.3.7'
+gem 'bootstrap-sass', '>= 3.4.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 
