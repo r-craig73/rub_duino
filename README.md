@@ -46,7 +46,7 @@
 ### Instructions (assuming Mac OS)
 * Clone repository and move to the home repository folder `rub_duino`.
 * Run `$ gem install rails`.
-* Verify that you are using ruby-2.4.1 in your terminal(s).
+* Verify that you are using ruby-2.4.3 in your terminal(s).
 * Run `$ bundle install` to install Ruby gems packages related to the Gemfile in the top level.
 * Rspec setup (Unit Testing and Models): In the terminal, run the following command `$ bundle exec rails generate rspec:install`. Files will be generated in the spec folder. In the home repository folder run `$ rspec` to view tests passing or failing.
 * Dino installation: Insert `gem 'dino'` in the `Gemfile` and run `$ bundle install` to install the rubygem. Download and install the Arduino IDE software. After verifying USB connection to your Arduino device, open the `rub_duino/du/du.ino` file.  Upload the file (right arrow) to install dino. You can now close the Arduino software.  Detailed instructions are located in https://github.com/austinbv/dino.
@@ -59,7 +59,7 @@
 
 ## Technologies Used
 ```
-Application: ruby-2.4.1, Bootstrap, HTML, postgres
+Application: ruby-2.4.3, Bootstrap, HTML, postgres
 Testing: Rails 5.2.0, rspec
 Environment: rubygems
 ```
@@ -73,7 +73,7 @@ Environment: rubygems
 * Ruby the Arduino way presentation by Austin Vance: http://confreaks.tv/videos/rubyconf2012-arduino-the-ruby-way
 * Setup a link to run a ruby function using Ruby on rails: https://stackoverflow.com/questions/11477191/how-do-i-run-ruby-code-on-a-button-click
 
-Copyright (c) 2018 **_RC productions_**
+Copyright (c) 2019 **_RC productions_**
 
 ## MIT License
 -----------
