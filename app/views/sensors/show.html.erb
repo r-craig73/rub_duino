@@ -43,8 +43,8 @@
           <td>
           LCD Commands <br>
           <button type="button" class="btn-lg btn-default"><%= link_to "Run Blinking LCD", lcd_wink_lcds_path(@sensor, :id => @sensor.id) %></button>
-          <button type="button" class="btn-lg btn-info"><%= link_to "LCD On", lcd_on_lcds_path(@sensor, :id => @sensor.id) %></button>
-          <button type="button" class="btn-lg btn-default"><%= link_to "LCD Off", lcd_off_lcds_path(@sensor, :id => @sensor.id) %></button>
+          <button type="button" class="btn-lg btn-success"><%= link_to "LCD On", lcd_on_lcds_path(@sensor, :id => @sensor.id) %></button>
+          <button type="button" class="btn-lg btn-danger"><%= link_to "LCD Off", lcd_off_lcds_path(@sensor, :id => @sensor.id) %></button>
           </td>
         </tr>
       <% end %>
