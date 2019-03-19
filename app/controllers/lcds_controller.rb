@@ -20,6 +20,7 @@ class LcdsController < ApplicationController
     10.times do
       wink(@led)
     end
+    redirect_to @sensor
   end
 
   def lcd_on
@@ -29,8 +30,9 @@ class LcdsController < ApplicationController
     @led = Dino::Components::Led.new(pin: number, board: board)
     sleep 1
     @led.send(:on)
-    sleep 60 # 60 seconds timeout to not burn out the sensor
+    sleep 30 # 30 seconds timeout to not burn out the sensor
     @led.send(:off)
+    redirect_to @sensor
   end
 
   def lcd_off
@@ -39,5 +41,6 @@ class LcdsController < ApplicationController
     board = Dino::Board.new(Dino::TxRx.new)
     @led = Dino::Components::Led.new(pin: number, board: board)
     @led.send(:off)
+    redirect_to @sensor
   end
 end
